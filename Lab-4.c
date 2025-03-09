@@ -8,5 +8,5 @@ float f(float x)
 }
 int i = 0;
 void main(){
-    printf("Chor vs code")
+    printf("Chor vs code");
 }

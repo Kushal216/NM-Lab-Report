@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Acer/Desktop/BSc.CSIT/B.Sc CSIT 3rd Semester/NM Lab",
-      "program": "c:/Users/Acer/Desktop/BSc.CSIT/B.Sc CSIT 3rd Semester/NM Lab/build/Debug/outDebug",
+      "cwd": "d:/BSc.CSIT/B.Sc CSIT 3rd Semester/NM Lab",
+      "program": "d:/BSc.CSIT/B.Sc CSIT 3rd Semester/NM Lab/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
