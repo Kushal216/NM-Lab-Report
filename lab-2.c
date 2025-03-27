@@ -10,6 +10,7 @@ int main()
 {
    float x0, x1, x2, E, Era;
    char sign;
+    printf("The Equation used for calcuation is:\nx^3-6*x+2\n");
    printf("Enter the initial guess values:");
    scanf("%f%f", &x1, &x0);
 
@@ -30,6 +31,6 @@ int main()
    } while (Era > E);
 
    printf("\nThe approximated value of the root of the given function is : \n x = %f .", x2);
-   printf("\n\nLab-no:2\nName : Kushal Dhakal\nRoll No. : 55/080\tSection : B\n");
+   printf("\nProgram By: KUSHAL DHAKAL");
    getch();
 }
