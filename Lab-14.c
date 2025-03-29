@@ -1,4 +1,4 @@
-//14.	Write a C program to find integral value by using Gaussian Integration.
+// 14.	Write a C program to find integral value by using Gaussian Integration.
 #include <stdio.h>
 #include <math.h>
 #define f(x) (exp(x))
@@ -6,7 +6,7 @@ int main()
 {
     int i, n = 2;
     float a, b, c, k[5], x[5], z[5], w[5], Ig = 0;
-        printf("The Equation used for calcuation is:\ne^x\n");
+    printf("The Equation used for calcuation is:\ne^x\n");
 
     printf("Enter the Lower & Upper Limits: ");
     scanf("%f%f", &a, &b);

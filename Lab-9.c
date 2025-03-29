@@ -1,23 +1,24 @@
-//9.	Write a C program to find integration using composite trapezoidal rule.
+// 9.	Write a C program to find integration using composite trapezoidal rule.
 #include <stdio.h>
 #include <math.h>
 #define MAX 10
 int f(int x)
 {
-    return (x* x * x + 2); // Example function
+    return (x * x * x + 2); // Example function
 }
 
-float trapezoidal(float a, float b, int n) {
-	float h, sum = 0, Ig;
-	int i;
+float trapezoidal(float a, float b, int n)
+{
+    float h, sum = 0, Ig;
+    int i;
     h = (b - a) / n; // Step size
-    sum=f(a)+f(b);
-	for (i = 0; i <= n; i++)
+    sum = f(a) + f(b);
+    for (i = 0; i <= n; i++)
     {
-       sum =sum+ f(a + i * h);
+        sum = sum + f(a + i * h);
     }
-//	for (i = 1; i <= n - 1; i++)
-//        sum += f[i];
+    //	for (i = 1; i <= n - 1; i++)
+    //        sum += f[i];
     Ig = h / 2 * sum;
     return Ig;
 }
@@ -33,7 +34,7 @@ int main()
     printf("Enter the no. of segments: ");
     scanf("%d", &n);
 
-    printf("\nThe integration using composite trapezoidal rule is %.3f\n", trapezoidal(a,b,n));
+    printf("\nThe integration using composite trapezoidal rule is %.3f\n", trapezoidal(a, b, n));
     printf("Program By: KUSHAL DHAKAL");
     return 0;
 }

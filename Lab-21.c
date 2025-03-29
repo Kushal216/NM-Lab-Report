@@ -1,4 +1,4 @@
-//21.	Write a C program for matrix factorization by using Do-little LU decomposition method.
+// 21.	Write a C program for matrix factorization by using Do-little LU decomposition method.
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>

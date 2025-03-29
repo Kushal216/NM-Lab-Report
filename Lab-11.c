@@ -15,7 +15,7 @@ int main()
     for (i = 0; i <= n; i++)
         f[i] = f(a + i * h);
     Ig = 3 * h / 8 * (f[0] + f[n] + 3 * (f[1] + f[2]));
-        printf("Using Simpson's 3/8 rule:\n");
+    printf("Using Simpson's 3/8 rule:\n");
     printf("The integration is %f\n", Ig);
     printf("Program By: KUSHAL DHAKAL");
     return 0;

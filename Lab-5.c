@@ -1,4 +1,4 @@
-//5.	Write a C program to interpolate using Lagrange's method.
+// 5.	Write a C program to interpolate using Lagrange's method.
 #include <stdio.h>
 #include <math.h>
 #include <conio.h>

@@ -1,6 +1,6 @@
-//6.	Write a C program to interpolate using Newton's Divided difference method.
+// 6.	Write a C program to interpolate using Newton's Divided difference method.
 #include <stdio.h>
-int i,j;
+int i, j;
 #define MAX 10 // Maximum number of data points
 
 // Function to calculate divided differences

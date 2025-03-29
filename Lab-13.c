@@ -1,4 +1,4 @@
-//13.	Write a C program to find integration using composite Simpson's 3/8 l rule.#include <stdio.h>
+// 13.	Write a C program to find integration using composite Simpson's 3/8 l rule.#include <stdio.h>
 #include <conio.h>
 #include <math.h>
 #define f(x) (x) * (x) * (x) + 3 * (x) * (x)
@@ -6,7 +6,7 @@ int main()
 {
     float a, h, x0, xn, fx0, fxn, term, v;
     int i, k;
-        printf("The Equation used for calcuation is:\nx^3+3x^2\n");
+    printf("The Equation used for calcuation is:\nx^3+3x^2\n");
 
     printf("Enter the Lower & Upper Limit: ");
     scanf("%f%f", &x0, &xn);

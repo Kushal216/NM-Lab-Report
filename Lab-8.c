@@ -1,17 +1,17 @@
-//8.	Write a C program to find integration using trapezoidal rule.
+// 8.	Write a C program to find integration using trapezoidal rule.
 #include <stdio.h>
 
 // Function to be integrated
 int f(int x)
 {
-    return (x* x * x + 2); // Example function
+    return (x * x * x + 2); // Example function
 }
 // Trapezoidal Rule Function
 int trapezoidal(int a, int b)
 {
-    float h = (b - a);   // Step size
+    float h = (b - a);       // Step size
     float sum = f(a) + f(b); // First and last terms
-    return (h / 2) * sum; // Final result
+    return (h / 2) * sum;    // Final result
 }
 int main()
 {
@@ -22,11 +22,8 @@ int main()
     scanf("%f", &a);
     printf("Enter upper limit (b): ");
     scanf("%f", &b);
-
-
     // Compute the integral
     float result = trapezoidal(a, b);
-
     // Output result
     printf("Approximate integral using Trapezoidal Rule: %.3f\n", result);
     printf("\nProgram By: KUSHAL DHAKAL");
