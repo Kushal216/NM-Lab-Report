@@ -1,4 +1,4 @@
-//15.	Write a C program to find integral value by using Romberg Integration.
+// 15.	Write a C program to find integral value by using Romberg Integration.
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
@@ -6,8 +6,8 @@
 int main()
 {
     float x0, xn, T[10][10], h, sm, sl, a;
-    int i,j, k, c, r, m, p, q;
-        printf("The Equation used for calcuation is:\n(1 / (1 + x))\n");
+    int i, j, k, c, r, m, p, q;
+    printf("The Equation used for calcuation is:\n(1 / (1 + x))\n");
     printf("Enter the Lower & Upper limits: ");
     scanf("%f%f", &x0, &xn);
     printf("Enter p and q of required T(p,q): ");

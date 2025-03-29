@@ -10,7 +10,7 @@ int main()
 {
     float a, b, c, E, Era;
     char sign;
-        printf("The Equation used for calcuation is:\nx^3-6*x+2\n");
+    printf("The Equation used for calcuation is:\nx^3-6*x+2\n");
     printf("Enter the initial guess values:");
     scanf("%f%f", &a, &b);
     if (f(a) * f(b) > 0)

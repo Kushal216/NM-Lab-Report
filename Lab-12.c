@@ -1,4 +1,4 @@
-//12.	write a C program to find integration using Composite Simpson's 1/3 l rule.
+// 12.	write a C program to find integration using Composite Simpson's 1/3 l rule.
 #include <stdio.h>
 #include <math.h>
 

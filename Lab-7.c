@@ -1,50 +1,89 @@
-
 #include <stdio.h>
-int i;
-// Function to compute the first derivative using forward difference
-double forward_difference(double x[], double y[], int n, double xp, double h)
+int i,j;
+// Function to calculate factorial
+int factorial(int n)
 {
-    for (i = 0; i < n - 1; i++)
+    int fact = 1;
+    for (i = 2; i <= n; i++)
     {
-        if (x[i] == xp)
-        {                                 // Find the closest x value
-            return (y[i + 1] - y[i]) / h; // First derivative formula
-        }
+        fact *= i;
     }
-    return 0.0;
+    return fact;
+}
+
+// Function to implement Newton's Forward Difference Interpolation
+double newtonForward(double x[], double y[][10], int n, double xp)
+{
+    double h = x[1] - x[0];
+    double u = (xp - x[0]) / h;
+    double yp = y[0][0];
+    double term;
+
+    for ( i = 1; i < n; i++)
+    {
+        term = y[0][i];
+        for (j = 0; j < i; j++)
+        {
+            term *= (u - j);
+        }
+        term /= factorial(i);
+        yp += term;
+    }
+    return yp;
 }
 
 int main()
 {
     int n;
-    double x[100], y[100], xp, h;
-
-    // Input number of data points
     printf("Enter number of data points: ");
     scanf("%d", &n);
 
-    // Input x and y values
-    printf("Enter x and y values:\n");
-    for (i = 0; i < n; i++)
+    if (n < 1)
     {
-        printf("x[%d]: ", i);
-        scanf("%lf", &x[i]);
-        printf("y[%d]: ", i);
-        scanf("%lf", &y[i]);
+        printf("Error: Number of data points must be greater than 0.\n");
+        return 1;
     }
 
-    // Input the point where derivative is needed
-    printf("Enter x value to calculate derivative: ");
+    double x[n], y[n][n];  // Updated array size
+
+    printf("\nEnter data points:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("x%d, y%d: ", i, i);
+        scanf("%lf%lf", &x[i], &y[i][0]);
+    }
+
+    // Forward difference table
+    for (j = 1; j < n; j++)
+    {
+        for (i = 0; i < n - j; i++)
+        {
+            y[i][j] = y[i + 1][j - 1] - y[i][j - 1];
+        }
+    }
+
+    double xp;
+    printf("Enter interpolation point x: ");
     scanf("%lf", &xp);
 
-    // Step size h
-    h = x[1] - x[0];
+    double yp = newtonForward(x, y, n, xp);
 
-    // Compute the first derivative
-    double derivative = forward_difference(x, y, n, xp, h);
+    // Display forward difference table
+    printf("\nForward Difference Table:\n\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%.2lf", x[i]);
+        for (j = 0; j < n - i; j++)
+        {
+            printf("\t%.4lf", y[i][j]);
+        }
+        printf("\n");
+    }
 
-    // Output result
-    printf("Approximate derivative at x = %lf is f'(x) = %lf\n", xp, derivative);
-    printf("Program By: KUSHAL DHAKAL");
+    printf("\nInterpolated value at x = %.2lf is y = %.4lf\n", xp, yp);
+
+    // Print required information
+    printf("\nProgram By: KUSHAL DHAKAL\n");
     return 0;
 }
+
